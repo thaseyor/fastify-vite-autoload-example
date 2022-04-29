@@ -1,0 +1,28 @@
+{
+  "name": "fastify-vite-autoload",
+  "version": "1.0.0",
+  "packageManager": "pnpm@6.32.3",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vite",
+    "vbuild": "vite build --out-dir dist",
+    "build": "pnpm run vbuild && esbuild dist/index.js --platform=node --bundle --minify --target=node16.14.0 --allow-overwrite --outfile=dist/index.js",
+    "build:nomodules": "pnpm run vbuild && esbuild dist/index.js --platform=node --minify --target=node16.14.0 --allow-overwrite --outfile=dist/index.js"
+  },
+  "keywords": [],
+  "author": "thaseyor",
+  "license": "ISC",
+  "dependencies": {
+    "fastify": "^3.27.4",
+    "fastify-plugin": "^3.0.1",
+    "mysql2": "^2.3.3"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.2.165",
+    "@types/node": "^17.0.23",
+    "esbuild": "^0.14.30",
+    "vite": "^2.8.6",
+    "vite-plugin-node": "^0.0.19"
+  }
+}
