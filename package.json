@@ -12,7 +12,7 @@
   },
   "keywords": [],
   "author": "thaseyor",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "fastify": "^3.27.4",
     "fastify-plugin": "^3.0.1",
