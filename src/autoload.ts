@@ -11,11 +11,11 @@ interface PluginOptions {
 
 const imported: { [key: string]: Modules } = {
   // @ts-expect-error
-  schemas: import.meta.globEager("./schema(|s)/**/*.(ts|js|cjs|mjs)"),
+  schemas: import.meta.globEager("./schemas/**/*.(ts|js|cjs|mjs)"),
   // @ts-expect-error
-  plugins: import.meta.globEager("./plugin(|s)/**/*.(ts|js|cjs|mjs)"),
+  plugins: import.meta.globEager("./plugins/**/*.(ts|js|cjs|mjs)"),
   // @ts-expect-error
-  routes: import.meta.globEager("./route(|s)/**/*.(ts|js|cjs|mjs)"),
+  routes: import.meta.globEager("./routes/**/*.(ts|js|cjs|mjs)"),
 };
 
 const load = (
